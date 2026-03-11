@@ -23,6 +23,19 @@ body {
   line-height: 1.6;
 }
 
+/* Subtle Floating Leaves Background Pattern */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 800'%3E%3Cg fill='%23a8a09e' opacity='0.25'%3E%3Cpath d='M0 0c30-30 70-30 100 0c-30 30-70 30-100 0z' transform='translate(150,750) rotate(-35) scale(1.5)'/%3E%3Cpath d='M0 0c30-30 70-30 100 0c-30 30-70 30-100 0z' transform='translate(350,600) rotate(15) scale(1.1)'/%3E%3Cpath d='M0 0c30-30 70-30 100 0c-30 30-70 30-100 0z' transform='translate(80,350) rotate(-65) scale(0.9)'/%3E%3Cpath d='M0 0c30-30 70-30 100 0c-30 30-70 30-100 0z' transform='translate(650,550) rotate(-45) scale(1.8)'/%3E%3Cpath d='M0 0c30-30 70-30 100 0c-30 30-70 30-100 0z' transform='translate(450,250) rotate(50) scale(0.8)'/%3E%3Cpath d='M0 0c30-30 70-30 100 0c-30 30-70 30-100 0z' transform='translate(700,150) rotate(75) scale(1.2)'/%3E%3Cpath d='M0 0c30-30 70-30 100 0c-30 30-70 30-100 0z' transform='translate(250,100) rotate(-15) scale(1.4)'/%3E%3Cpath d='M0 0c30-30 70-30 100 0c-30 30-70 30-100 0z' transform='translate(50,50) rotate(25) scale(1)'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 800px 800px;
+  background-position: center;
+  background-repeat: repeat;
+}
+
 h1 {
   color: var(--heading-color);
   font-family: var(--font-heading);
