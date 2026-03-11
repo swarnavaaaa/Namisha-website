@@ -140,18 +140,51 @@ nav.desktop-nav {
 nav.desktop-nav ul {
   display: flex;
   list-style: none;
-  gap: 2rem;
+  gap: 0.5rem;
+  align-items: center;
 }
 
 nav.desktop-nav li a {
   font-size: 0.95rem;
   font-weight: 500;
-  color: var(--body-text-color);
+  color: var(--heading-color);
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
 }
 
-nav.desktop-nav li a:hover,
+nav.desktop-nav li a:hover {
+  background-color: rgba(189, 208, 212, 0.4);
+  transform: translateY(-1px);
+}
+
 nav.desktop-nav li a.active {
-  color: var(--subheading-color);
+  background-color: #BDD0D4;
+  color: var(--heading-color);
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+nav.desktop-nav li:last-child a {
+  background-color: var(--heading-color);
+  color: white;
+  border-radius: 8px;
+  padding: 0.7rem 1.4rem;
+  margin-left: 1rem;
+}
+
+nav.desktop-nav li:last-child a:hover {
+  background-color: var(--accent-color);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+nav.desktop-nav li:last-child a:active {
+  transform: scale(0.96);
 }
 
 .nav-actions {
