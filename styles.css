@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Public+Sans:ital,wght@0,400;0,700;1,400&display=swap');
 
 :root {
-  --bg-color: #2F6F73;
-  --heading-color: #F6F4EF;
-  --body-text-color: #DADFE3;
-  --subheading-color: #E38B6C;
-  --accent-color: #E38B6C;
+  --bg-color: #F7F3F0;
+  --heading-color: #3D4C46;
+  --body-text-color: #4D4D4D;
+  --subheading-color: #3D4C46;
+  --accent-color: #C99080;
   --font-heading: 'Crimson Pro', serif;
   --font-body: 'Public Sans', sans-serif;
 }
@@ -136,13 +136,9 @@ nav.desktop-nav li a {
   color: var(--body-text-color);
 }
 
-nav.desktop-nav li a:hover {
-  color: var(--subheading-color);
-}
-
+nav.desktop-nav li a:hover,
 nav.desktop-nav li a.active {
-  color: #1a1a1a;
-  font-weight: 700;
+  color: var(--subheading-color);
 }
 
 .nav-actions {
@@ -168,7 +164,7 @@ nav.desktop-nav li a.active {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: radial-gradient(circle, rgba(246,244,239,0.08) 0%, rgba(47,111,115,0) 70%);
+  background: radial-gradient(circle, rgba(255,255,255,0.7) 0%, rgba(249,247,242,0) 70%);
 }
 
 .hero-img {
@@ -276,7 +272,7 @@ main.page-content {
 }
 
 .quote-box {
-  background-color: rgba(246, 244, 239, 0.05);
+  background-color: white;
   padding: 3rem;
   border-radius: 12px;
   box-shadow: 0 10px 40px rgba(0,0,0,0.03);
