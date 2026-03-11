@@ -534,3 +534,15 @@ img {
     height: 60px;
   }
 }
+
+/* Interactive Cards */
+.hover-card {
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  cursor: default;
+}
+
+.hover-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.08) !important;
+}
+
