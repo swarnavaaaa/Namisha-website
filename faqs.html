@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQs | The Singular Space</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta name="description" content="Namisha Chamaria - Psychoanalytic Psychotherapy in Mumbai and Online.">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <a href="index.html" class="logo-container">
+      <img src="logo.png" alt="Logo">
+      <div class="logo-text">
+        <span class="name">Namisha Chamaria</span>
+        <span class="credentials">M.A. Applied Psychology, TISS</span>
+      </div>
+    </a>
+    
+    <nav class="desktop-nav">
+      <ul>
+        <li><a href="index.html" class="">Home</a></li>
+        <li><a href="about.html" class="">About</a></li>
+        <li><a href="psychotherapy.html" class="">Psychotherapy</a></li>
+        <li><a href="areas-of-work.html" class="">Areas of Work</a></li>
+        <li><a href="faqs.html" class="active">FAQs</a></li>
+        <li><a href="resources.html" class="">Resources</a></li>
+        <li><a href="contact.html" class="">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="#"><i class="fa-solid fa-leaf"></i></a>
+      <a href="#"><i class="fa-solid fa-clipboard-list"></i></a>
+      <div class="lang-selector" style="font-family: var(--font-body); font-size: 0.85rem; display: flex; align-items: center; gap: 0.3rem;">
+        <div id="google_translate_element"></div>
+      </div>
+    </div>
+  </header>
+  <main class="page-content">
+    <style>
+      .faq-item {
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+        margin-bottom: 1.2rem;
+        border-left: 4px solid var(--accent-color);
+        transition: all 0.3s ease;
+      }
+      .faq-item:hover {
+        box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+      }
+      .faq-item summary {
+        padding: 1.5rem 2rem;
+        font-size: 1.15rem;
+        color: var(--heading-color);
+        font-family: var(--font-heading);
+        font-weight: 500;
+        cursor: pointer;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .faq-item summary::-webkit-details-marker {
+        display: none;
+      }
+      .faq-item[open] {
+        border-left: 4px solid var(--heading-color);
+      }
+      .faq-item[open] summary {
+        border-bottom: 1px solid rgba(0,0,0,0.05);
+        color: var(--heading-color);
+      }
+      .faq-item[open] .icon-arrow {
+        transform: rotate(180deg);
+      }
+      .faq-content {
+        padding: 1.5rem 2rem;
+        color: var(--body-text-color);
+        font-size: 1rem;
+        line-height: 1.8;
+      }
+      .faq-content p { margin-bottom: 1.2rem; }
+      .faq-content p:last-child { margin-bottom: 0; }
+      .faq-content ul, .faq-content ol { margin-left: 1.5rem; margin-bottom: 1.2rem; }
+      .faq-content li { margin-bottom: 0.5rem; }
+      .icon-arrow {
+        transition: transform 0.3s ease;
+        color: var(--accent-color);
+        font-size: 1rem;
+      }
+    </style>
+
+    <div class="page-title">
+      <h1>Frequently Asked Questions</h1>
+      <div class="divider" style="margin-bottom: 3rem;"></div>
+      <img src="faq-art.jpg" alt="FAQ Illustration of intertwined minds" style="width: 100%; max-width: 500px; height: auto; border-radius: 12px; margin: 0 auto; display: block; box-shadow: 0 10px 40px rgba(0,0,0,0.05);">
+    </div>
+    
+    <div class="content-section" style="margin-bottom: 3rem;">
+      <p style="text-align: center; max-width: 800px; margin: 0 auto; font-size: 1.1rem;">This section covers the commonly asked questions about psychotherapy related to logistics, fee, structure, ethics and external resources. If you need more information about something not listed on this website please feel free to write to me via the contact information given <a href="contact.html" style="color: var(--accent-color); text-decoration: underline;">here</a>.</p>
+    </div>
+
+    <div style="max-width: 900px; margin: 0 auto; margin-bottom: 4rem;">
+      
+      <details class="faq-item">
+        <summary>Is there any criteria for who can seek therapy? <i class="fa-solid fa-chevron-down icon-arrow"></i></summary>
+        <div class="faq-content">
+          <p>I work with individuals between the ages of 12 and 50 years. People of all caste, class, gender identities, sexual orientations, professional backgrounds, religious beliefs, and cultural locations are welcome at The Singular Space. If you fall outside this age range, or are seeking couple, family, or group therapy, you are welcome to contact me for appropriate referrals through the contact details provided <a href="contact.html" style="color: var(--accent-color); text-decoration: underline;">here</a>.</p>
+        </div>
+      </details>
+      
+      <details class="faq-item">
+        <summary>When should one seek therapy? <i class="fa-solid fa-chevron-down icon-arrow"></i></summary>
+        <div class="faq-content">
+          <p>There are several reasons one can seek therapy for and hence there is no "right" time or the "right problems" under one can seek therapy for. One can seek therapy for major life crisis or changes, debilitating psychological pain, distress from particular events, exploring or understanding oneself better or simply to experience therapy or understand if one even needs it - even if you cannot name it and something feels off.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>What problems can one talk about? Are there things one should not talk about? <i class="fa-solid fa-chevron-down icon-arrow"></i></summary>
+        <div class="faq-content">
+          <p>Psychotherapy precisely steps in when one wants to talk about something they otherwise can't or don't understand. This can include fantasies, fears, relationships, memories, dreams, bodily experiences, secrets, paradoxes and uncertainties. We also discuss sensitive topics such as sex, gender or religion that one can necessarily not discuss with other people in their personal life.</p>
+          <p>There are no forbidden topics in therapy. Often, the very things that feel difficult, trivial, boring, unnecessary, embarrassing, confusing, or unspeakable are the most meaningful to explore.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>How will therapy help? <i class="fa-solid fa-chevron-down icon-arrow"></i></summary>
+        <div class="faq-content">
+          <p>Please read more about this on the <a href="psychotherapy.html" style="color: var(--accent-color); text-decoration: underline;">Psychoanalytic Psychotherapy page</a>.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>How long will therapy take? <i class="fa-solid fa-chevron-down icon-arrow"></i></summary>
+        <div class="faq-content">
+          <p>The initial few sessions are to begin understanding what brings you to therapy and what you hope to find within it. Together, we explore your concerns, expectations, and questions about the therapeutic process, including the structure, frequency, and rhythm of sessions. This phase helps clarify the direction and scope of the work, allowing the therapeutic space to take shape in a way that is meaningful and responsive to your needs.</p>
+          <p>Psychoanalytic psychotherapy is typically a long-term form of treatment, as it involves a gradual process of forming trust, alliance and adjusting to the setting. Meaningful psychological change unfolds over time, and therefore, the duration of therapy is not set in stone. There may, however, be natural thresholds where you and your therapist sense that the work has reached a point of integration or completion, and the possibility of ending therapy can be thoughtfully considered.</p>
+          <p>To support continuity and depth, it is generally recommended to avoid sudden or frequent interruptions, as these can disrupt the rhythm and emotional process of therapy. Wherever possible, changes in pace or structure are best explored together, within the therapeutic space itself.</p>
+          <p>You can read more about the process <a href="psychotherapy.html" style="color: var(--accent-color); text-decoration: underline;">here</a>.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Will I find a permanent solution to my problems? <i class="fa-solid fa-chevron-down icon-arrow"></i></summary>
+        <div class="faq-content">
+          <p>Psychotherapy does not cater to finding permanent solutions or fixes to our conflicts, since that doesn't exist. Our conflicts and sufferings can often hold their source in unconscious and unknown dimensions or be hiding in plain sight. Psychoanalytic psychotherapy aids in uncovering what is unknown or what is impossible to know so we can develop a deeper capacity to understand, tolerate, and respond to our life, rather than feeling overwhelmed or trapped by it.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Will you tell me what to do, give advice, or offer solutions? <i class="fa-solid fa-chevron-down icon-arrow"></i></summary>
+        <div class="faq-content">
+          <p>Rather than giving direct advice or solutions, psychoanalytic psychotherapy focuses on helping you understand your inner world, emotional conflicts, and unconscious patterns. This approach supports you in finding your own meanings and truth, rather than imposing external answers.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Do you prescribe medications or conduct psychodiagnostic testing? How is this different from a psychiatric doctor? <i class="fa-solid fa-chevron-down icon-arrow"></i></summary>
+        <div class="faq-content">
+          <p>Mental health care involves different kinds of professionals, each trained to offer distinct forms of support that complement one another. Understanding these roles can help you choose the kind of help that best suits your needs.</p>
+          <p><strong>Psychotherapy and Counselling:</strong> A psychotherapist or a counsellor is trained to conduct short or long term psychotherapy that focuses on supporting long-term psychological growth and emotional change. They hold a Master's degree from an UGC recognized university along with ongoing training through further education, supervision and personal therapy. Hence, at The Singular Space, the focus is to alleviate suffering through in-depth listening, speaking and emotional exploration. They do not prescribe medication and typically do not conduct formal psychodiagnostic testing, unless additionally qualified and licensed to do so.</p>
+          <p>When needed, psychotherapists often collaborate with psychiatrists and clinical psychologists to ensure that clients receive comprehensive and ethical care. In case if needed, to support treatment referrals are made when: Medication evaluation is indicated, Diagnostic assessment is clinically useful, or Additional specialized support is required.</p>
+          <p><strong>Psychiatric doctor:</strong> Psychiatric medications can only be prescribed by a Psychiatric doctor who holds a valid licensed MBBS degree with a specialization in Psychiatry (MD/DNB). They are equipped to manage and treat psychiatric disorders through medications and monitor for side effects/health risks and other physical symptoms of mental health disorders such as severe depression, anxiety, bipolar disorder, psychosis, sleep disorders or severe mood instability. A psychiatric doctor focuses primarily on the medical and biological dimensions of mental health.</p>
+          <p><strong>Clinical psychologists:</strong> Professionals who have completed an MPhil degree from an RCI recognized institute and hold a RCI-License number. They are trained for both psychotherapy and formal Psychodiagnostic assessments such as intelligence and IQ testing, personality assessments, learning and development assessments, neurodivergence, diagnostic assessments or neuropsychological valuations which hold valid legally and ethically.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>What is the structure of therapy work? <i class="fa-solid fa-chevron-down icon-arrow"></i></summary>
+        <div class="faq-content">
+          <ul>
+            <li><strong>Intake Form:</strong> After you reach out, you will be asked to complete a brief intake form to help me understand your concerns and background.</li>
+            <li><strong>Consultation Call (20 minutes):</strong> A short introductory conversation to explore your needs, answer questions, and assess whether my approach feels like a good fit. We will also discuss the logistics of setting a few, a fixed slot and day for the therapy sessions.</li>
+            <li><strong>Preliminary Sessions:</strong> The initial sessions focus on understanding your concerns, expectations, and emotional world, while mutually assessing therapeutic fit.</li>
+            <li><strong>Ongoing Therapy Work:</strong> If we mutually decide to continue, regular weekly sessions are scheduled on a fixed day and time, providing consistency and continuity for meaningful therapeutic work. To support depth and stability in the process, I offer weekly sessions only and work within a fixed-slot structure. I am unable to accommodate varying session frequencies, changing time slots each week, or irregular scheduling.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>What do sessions look like? <i class="fa-solid fa-chevron-down icon-arrow"></i></summary>
+        <div class="faq-content">
+          <p>Therapy sessions typically last for 50 minutes, done once a week. It usually involves exploring whatever you bring up and there is no fixed structure and is non-directive. The session is yours and you use it to speak as you want. My role is to listen and help you make sense of your experiences to aid in change. You can read more about this <a href="psychotherapy.html" style="color: var(--accent-color); text-decoration: underline;">here</a>.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>What is the location for psychotherapy? <i class="fa-solid fa-chevron-down icon-arrow"></i></summary>
+        <div class="faq-content">
+          <p>Currently, psychotherapy is conducted online via Google Meet; allowing access across cities, states, and countries. The link for the same will be shared at the time of discussing logistics. My practice currently is not available in-person.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Who else will know about the information shared in therapy? <i class="fa-solid fa-chevron-down icon-arrow"></i></summary>
+        <div class="faq-content">
+          <p>All information and knowledge shared within psychotherapy sessions remains strictly confidential. It is my core commitment to uphold an ethical practice that is sensitive to the privacy of individuals seeking psychotherapy. Please read here for more information on ethical and legal guidelines of my therapy practice along with its exceptions.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>How do I know if you are the right therapist for me? <i class="fa-solid fa-chevron-down icon-arrow"></i></summary>
+        <div class="faq-content">
+          <p>The few initial sessions will also be used to assess if we are a good fit to work together so we can also identify what might be the best course of action for you. In case it doesn't work out, I will provide an appropriate referral.</p>
+          <p>As a psychotherapist I do not function with a stance that adheres to pre-set protocols, schedules, exercises, homework, activities, worksheets and other generic advice or prescriptions on how to "live" or "think" about your life. Instead I work with a lens that tries to dive into your inner world and psychic conflicts so we can structurally and dynamically engage with your problems, to redefine it from the roots. Hence my practice rests on the stance of an "individually tailored framework" that doesn't believe in the idea that one problem will have the same solution for every individual suffering from it. Our problems are like snow-flakes, unique to each, hence the therapy process is singular to each. And hence this space is rooted in the "no one size fits all" approach.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>What do I do if I am unsure about therapy? <i class="fa-solid fa-chevron-down icon-arrow"></i></summary>
+        <div class="faq-content">
+          <p>It is natural and obvious to not be sure if therapy may work out, given its nature of being not fixed with no guarantee, no returns, no refunds or no exchanges. Hence, we begin with an initial consultation call and preliminary sessions to explore your concerns, expectations, and questions without obligation. Of course, surety may not develop either after that, and hence exploring unsureness and skepticism of the process too forms a part of the ongoing conversation in therapy.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>What if I want to stop therapy? <i class="fa-solid fa-chevron-down icon-arrow"></i></summary>
+        <div class="faq-content">
+          <p>You have the right to pause or end therapy at any point, for any reason. While it is often meaningful to discuss your thoughts about ending and work toward a thoughtful, collaborative conclusion, you are never obligated to continue therapy if you no longer wish to do so. If you decide to discontinue, I invite you to share this with me so that we may address any unfinished concerns, reflect on the process, and, if needed, explore referrals or next steps to support a smooth transition.</p>
+          <p>When therapy moves toward a planned ending, we usually agree on a closing phase during which we reflect together on the journey, the shifts you may have noticed within yourself, the changes in emotional patterns, and the meanings that have emerged through the work. At times, you may reach a sense of completion earlier than anticipated. Should this occur, I encourage you to bring this experience into our conversations, so we may enter a final phase of reflection and integration. Endings hold deep emotional and psychological significance. By approaching them with openness and care, we allow the therapeutic process to come to a thoughtful and meaningful close.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>How can I reach out and set up a meeting? <i class="fa-solid fa-chevron-down icon-arrow"></i></summary>
+        <div class="faq-content">
+          <p>You can reach out via the contact form / email provided on the website <a href="contact.html" style="color: var(--accent-color); text-decoration: underline;">here</a>. You will receive a response regarding availability, process, and scheduling.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Where therapy may not help? Limitations of psychotherapy. <i class="fa-solid fa-chevron-down icon-arrow"></i></summary>
+        <div class="faq-content">
+          <p>Psychotherapy is not designed to replace emergency care, crisis intervention, or immediate medical and psychiatric support. If you or someone you know is experiencing acute emotional distress, suicidal thoughts, severe psychiatric symptoms, risk of harm, or medical emergency, it is essential to seek immediate professional help.</p>
+          <p>In such situations, emergency services, psychiatric care, and crisis helplines are often more appropriate than ongoing psychotherapy. Here you can find trusted India-based crisis and emergency resources offering immediate and confidential support (link to resources section).</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>What languages do you conduct therapy in? <i class="fa-solid fa-chevron-down icon-arrow"></i></summary>
+        <div class="faq-content">
+          <p>Language plays a vital role in psychotherapy, as it allows for depth, emotional nuance, and meaningful engagement. I conduct therapy sessions primarily in English, and I am also fluent in Hindi. I am able to understand Gujarati and Marathi conversationally, though my proficiency in these languages is limited for in-depth therapeutic work. If language is an important consideration for you and you would prefer therapy in another language, you are welcome to reach out, and I will be happy to offer appropriate referrals through the contact details provided on the website.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>How much will I have to pay for therapy, and what if I cannot afford it? <i class="fa-solid fa-chevron-down icon-arrow"></i></summary>
+        <div class="faq-content">
+          <p>I understand that therapy is a long-term financial commitment. Hence, to support equitable access to therapy, a limited number of concession and sliding-scale slots are available. Availability varies, and some slots may have longer waiting periods than others. If finances are a concern, you are welcome to reach out to discuss current availability and if needed, referrals for a therapist more suited to your budget.</p>
+          <p><strong>For individuals residing in India (Last updated 2026)</strong><br>
+          For 50 minute weekly individual therapy sessions - INR 2500<br>
+          Limited sliding scale slots (subject to availability) - INR 1800-2000</p>
+          <p><strong>For Individuals working and residing outside India (Last updated 2026)</strong><br>
+          International fees are structured keeping in mind global income standards and currency differences. The standard fee is as below:<br>
+          For 50 minute weekly individual therapy sessions - INR 4000<br>
+          Limited sliding scale slots available (subject to availability) at INR 3000-3500</p>
+          <p style="font-size: 0.9rem; font-style: italic;">Note: Session fees are subject to change and may not always reflect real-time updates on the website. The applicable fee will be communicated at the time of contact or scheduling.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>What payment modes are accepted? <i class="fa-solid fa-chevron-down icon-arrow"></i></summary>
+        <div class="faq-content">
+          <p>Currently I accept payments via UPI and Bank transfer only for individuals residing in India or outside India.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>How long do I have to wait after reaching out to begin therapy? <i class="fa-solid fa-chevron-down icon-arrow"></i></summary>
+        <div class="faq-content">
+          <p>Generally I respond within 3-7 days of working days once I have received your enquiry. Once we connect, we will schedule a consultation call and find a mutually convenient slot to begin our work. You can expect a wait time of 2 weeks to 3 months depending on schedules and availability of slots.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Are there any documents I have to sign before therapy? <i class="fa-solid fa-chevron-down icon-arrow"></i></summary>
+        <div class="faq-content">
+          <p>Following the initial consultation, you will be invited to review and sign an informed consent form. This document is designed to support clarity, transparency, and mutual understanding. It outlines the scope of our work together, including confidentiality, session structure, professional boundaries, rescheduling, cancellation policies, and ethical/legal guidelines. This process helps establish a safe, respectful, and collaborative therapeutic framework. I will be happy to walk you through any part of the document and address any questions or concerns you may have before you sign.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>How safe is therapy? Are there any legal and ethical guidelines or consequences? <i class="fa-solid fa-chevron-down icon-arrow"></i></summary>
+        <div class="faq-content">
+          <p>At The Singular Space, I adhere strictly to professional ethical standards and legal responsibilities in the practice of psychotherapy. My work is guided by the ethical framework of the British Association for Counselling and Psychotherapy (BACP), along with relevant Indian legal and professional guidelines governing mental healthcare, confidentiality, child protection, and data security. Your emotional safety, dignity, autonomy, and privacy form the foundation of this therapeutic space.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Do you work with patients outside India and does that have a different structure of therapy process? <i class="fa-solid fa-chevron-down icon-arrow"></i></summary>
+        <div class="faq-content">
+          <p>Yes, I work with individuals based outside India through online sessions. The therapeutic process, structure, and ethical standards remain the same, regardless of geographical location. The only differences may involve time zone coordination, scheduling logistics, and fee structure, which are discussed during the initial consultation. The depth, continuity, and confidentiality of the work remain unchanged.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>How is this different from talking to friends, family, doctors or other healing treatment professionals? <i class="fa-solid fa-chevron-down icon-arrow"></i></summary>
+        <div class="faq-content">
+          <p>Friends, family, doctors, and other healing professionals each offer important forms of care. Psychotherapy provides something distinct: a confidential, non-judgmental space focused entirely on your emotional life, inner world, and patterns of experience.</p>
+          <p>Unlike everyday relationships, therapy is free from personal roles, advice, and expectations, allowing for depth, reflection, and emotional honesty. You can absolutely continue therapy alongside other forms of care. These approaches often complement each other, and therapy can deepen your overall healing and self-understanding.</p>
+        </div>
+      </details>
+
+    </div>
+  </main>  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <a href="ethical-guidelines.html" class="footer-link">Ethical and Legal Guidelines</a>
+      <p class="footer-disclaimer">Updated on 2026. Please understand that with time things may have changed if the website doesn't get updated later for some reason.</p>
+      <p class="footer-copyright">&copy; 2026 Namisha Chamaria. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Google Translate Script -->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+    }
+  </script>
+  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>
+
+
+
