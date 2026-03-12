@@ -428,6 +428,30 @@ main.page-content {
   font-weight: 400;
 }
 
+/* Page Specific Overrides to remove shadows and highlights on specific pages */
+.areas-page .hover-card,
+.resources-page .hover-card {
+  box-shadow: none !important;
+  border-left: none !important;
+  border-top: none !important;
+  border-bottom: none !important;
+  transform: none !important;
+  background: white; /* Keep white background for contrast */
+}
+
+.areas-page .quote-box,
+.resources-page .quote-box {
+  box-shadow: none !important;
+  border-left: none !important;
+  border-top: none !important;
+  border-bottom: none !important;
+}
+
+.areas-page .quote-box::before,
+.resources-page .quote-box::before {
+  display: none !important;
+}
+
 footer {
   text-align: center;
   padding: 4rem 2rem;
