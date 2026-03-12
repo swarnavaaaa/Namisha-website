@@ -6,7 +6,7 @@ pages = [
   <section class="hero">
     <img src="portrait.png" alt="Namisha Chamaria Portrait" class="hero-img">
     <h1>The Singular Space</h1>
-    <div class="subtitle">Psychoanalytic Psychotherapy &bull; Mumbai &amp; Online</div>
+    <div class="subtitle">Psychoanalytically-oriented Psychotherapy &bull; Mumbai &amp; Online</div>
     
     <div class="hero-buttons">
       <a href="contact.html" class="btn btn-primary">Reach Out</a>
@@ -45,11 +45,11 @@ pages = [
     {"filename": "psychotherapy.html", "title": "Psychotherapy", "content": """
   <main class="page-content">
     <div class="page-title">
-      <h1>Psychoanalytic Psychotherapy</h1>
+      <h1>Psychoanalytically-oriented Psychotherapy</h1>
       <div class="divider"></div>
     </div>
     <div class="content-section">
-      <p>Psychoanalytic psychotherapy is a deeply relational process. It aims to help individuals understand their unconscious mind, the root causes of their current distress, and unhelpful patterns in their lives.</p>
+      <p>Psychoanalytically-oriented psychotherapy is a deeply relational process. It aims to help individuals understand their unconscious mind, the root causes of their current distress, and unhelpful patterns in their lives.</p>
       <div class="quote-box" style="margin: 2rem auto;">
         <h3>"It is a journey of understanding the unseen narratives that shape our lives."</h3>
       </div>
@@ -143,7 +143,7 @@ header_template = """<!DOCTYPE html>
   <title>{title} | The Singular Space</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <meta name="description" content="Namisha Chamaria - Psychoanalytic Psychotherapy in Mumbai and Online.">
+  <meta name="description" content="Namisha Chamaria - Psychoanalytically-oriented Psychotherapy in Mumbai and Online.">
 </head>
 <body>
 
