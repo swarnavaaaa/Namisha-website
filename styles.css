@@ -395,6 +395,21 @@ main.page-content {
   max-width: 800px;
   border-left: 4px solid #2C3E50;
   transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  position: relative;
+}
+
+.quote-box::before {
+  content: "“";
+  position: absolute;
+  top: -15px;
+  left: 20px;
+  font-family: var(--font-heading);
+  font-size: 8rem;
+  color: var(--accent-color);
+  opacity: 0.12;
+  line-height: 1;
+  pointer-events: none;
+  font-style: normal;
 }
 
 .hover-card:hover {
