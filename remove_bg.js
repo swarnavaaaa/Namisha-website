@@ -1,7 +1,7 @@
 const { Jimp } = require('jimp');
 const path = require('path');
 
-const images = ['Sunflower.png', 'Bluebells.png', 'Petunia.png', 'Rose.png', 'new couch.jpg'];
+const images = ['Sunflower.png', 'Bluebells.png', 'Petunia.png', 'Rose.png', 'new-couch.jpg'];
 const dir = __dirname;
 
 function colorDistance(r1, g1, b1, r2, g2, b2) {
