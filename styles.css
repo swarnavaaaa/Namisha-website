@@ -428,28 +428,24 @@ main.page-content {
   font-weight: 400;
 }
 
-/* Page Specific Overrides to remove shadows and highlights on specific pages */
+/* Page Specific Overrides - Using Orange instead of Navy for these pages */
 .areas-page .hover-card,
 .resources-page .hover-card {
-  box-shadow: none !important;
-  border-left: none !important;
-  border-top: none !important;
-  border-bottom: none !important;
-  transform: none !important;
-  background: white; /* Keep white background for contrast */
+  border-left-color: var(--accent-color) !important;
+  border-top-color: var(--accent-color) !important;
+  border-bottom-color: var(--accent-color) !important;
 }
 
 .areas-page .quote-box,
 .resources-page .quote-box {
-  box-shadow: none !important;
-  border-left: none !important;
-  border-top: none !important;
-  border-bottom: none !important;
+  border-left-color: var(--accent-color) !important;
 }
 
+/* Allow decorative quote marks to reappear with orange tint */
 .areas-page .quote-box::before,
 .resources-page .quote-box::before {
-  display: none !important;
+  display: block !important;
+  color: var(--accent-color) !important;
 }
 
 footer {
