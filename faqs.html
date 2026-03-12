@@ -35,8 +35,9 @@
     <div class="nav-actions">
       <a href="https://www.linkedin.com/in/namisha-chamaria-6910b522a" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
       <a href="https://themindclan.com/professionals/namisha-chamaria-22032024/" target="_blank"><i class="fa-solid fa-leaf"></i></a>
-      <div class="lang-selector" style="font-family: var(--font-body); font-size: 0.85rem; display: flex; align-items: center; gap: 0.3rem;">
-        <div id="google_translate_element"></div>
+      <div id="google_translate_element"></div>
+      <div class="custom-translate-btn" id="customTranslateBtn" title="Translate Page">
+        <i class="fa-solid fa-globe"></i>
       </div>
     </div>
     <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle navigation">
@@ -335,10 +336,26 @@
     const desktopNav = document.querySelector('.desktop-nav');
     const menuIcon = mobileMenuToggle.querySelector('i');
 
+    // Toggle Mobile Menu
     mobileMenuToggle.addEventListener('click', () => {
       desktopNav.classList.toggle('active');
       menuIcon.classList.toggle('fa-bars');
       menuIcon.classList.toggle('fa-xmark');
+    });
+
+    // Custom Translate Trigger
+    document.getElementById('customTranslateBtn').addEventListener('click', () => {
+      const googleElement = document.querySelector('#google_translate_element .goog-te-gadget-simple');
+      if (googleElement) {
+        googleElement.click();
+      } else {
+        const combo = document.querySelector('.goog-te-combo');
+        if (combo) {
+          combo.focus();
+          const event = new MouseEvent('mousedown', { bubbles: true });
+          combo.dispatchEvent(event);
+        }
+      }
     });
 
     // Close menu when clicking a link
