@@ -411,7 +411,7 @@ footer {
 }
 
 .footer-link {
-  color: var(--body-text-color);
+  color: var(--accent-color);
   font-family: var(--font-body);
   font-size: 1.05rem;
   font-weight: 500;
@@ -420,11 +420,11 @@ footer {
 }
 
 .footer-link:hover {
-  color: var(--accent-color);
+  opacity: 0.8;
 }
 
 .footer-disclaimer {
-  color: var(--subheading-color);
+  color: var(--accent-color);
   font-size: 0.95rem;
   line-height: 1.6;
 }
