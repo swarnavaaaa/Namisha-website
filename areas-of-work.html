@@ -150,7 +150,11 @@
 
       <!-- 7 -->
       <div class="hover-card" style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); border-top: 3px solid var(--accent-color);" >
-        <h3 style="color: var(--heading-color); margin-bottom: 1rem; font-size: 1.3rem; display: flex; align-items: center; gap: 0.5rem;"><i class="fa-solid fa-staff-snake" style="color: var(--accent-color); font-size: 1.1rem;"></i> Body, Health, Illness & Disability</h3>
+        <h3 style="color: var(--heading-color); margin-bottom: 1rem; font-size: 1.3rem; display: flex; align-items: center; gap: 0.5rem;"><i class="fa-solid fa-staff-snake" style="color: var(--accent-color); font-size: 1.1rem;"></i> Body, Health, Illness & Disability <button class="info-btn" title="Disclaimer" onclick="toggleDisclaimer(event, 'body-disclaimer')"><i class="fa-solid fa-circle-info"></i></button></h3>
+
+        <div id="body-disclaimer" class="disclaimer-text" style="display: none;">
+          Psychoanalytic psychotherapy is not a medical treatment or a cure for physical illness, disability, or chronic pain; these conditions must be managed by a qualified physician. My role is to help you navigate the emotional toll that often accompanies physical suffering. By processing the emotional stress held in the body, we work toward improving your mental resilience and overall quality of life while living with these challenges.
+        </div>
 
         <ul style="list-style: none; padding-left: 0; color: var(--body-text-color); font-size: 0.95rem; line-height: 1.6;">
           <li>&bull; Chronic illness</li>
@@ -273,6 +277,17 @@
         menuIcon.classList.remove('fa-xmark');
       });
     });
+
+    // Toggle Disclaimer Function
+    function toggleDisclaimer(event, id) {
+      event.preventDefault();
+      const disclaimer = document.getElementById(id);
+      if (disclaimer.style.display === 'none') {
+        disclaimer.style.display = 'block';
+      } else {
+        disclaimer.style.display = 'none';
+      }
+    }
   </script>
   <!-- Bottom-left flower decoration -->
   <img src="Bluebells.png" alt="Bluebells decoration" style="position: fixed; bottom: 0; left: 0; width: 225px; height: auto; pointer-events: none; z-index: 0; opacity: 0.25;">
