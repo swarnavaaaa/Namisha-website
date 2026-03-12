@@ -98,6 +98,9 @@ header {
   padding: 1rem 4rem;
   background-color: var(--bg-color);
   border-bottom: 1px solid rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .logo-container {
@@ -145,15 +148,16 @@ nav.desktop-nav ul {
 }
 
 nav.desktop-nav li a {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 500;
   color: var(--heading-color);
-  padding: 0.6rem 1rem;
+  padding: 0.5rem 0.8rem;
   border-radius: 6px;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   text-decoration: none;
   display: flex;
   align-items: center;
+  white-space: nowrap;
 }
 
 nav.desktop-nav li a:hover {
@@ -202,6 +206,18 @@ nav.desktop-nav li:last-child a:active {
 
 .nav-actions i:hover {
   color: var(--heading-color);
+}
+
+/* Hamburger Menu Icon */
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--heading-color);
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 1001;
 }
 
 .hero {
@@ -544,5 +560,85 @@ img {
 .hover-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 15px 35px rgba(0,0,0,0.08) !important;
+}
+
+/* Mobile Menu Overlay */
+@media (max-width: 900px) {
+  .mobile-menu-toggle {
+    display: block;
+    order: 3;
+  }
+
+  .logo-container {
+    order: 1;
+  }
+
+  .nav-actions {
+    order: 2;
+    margin-left: auto;
+    margin-right: 1rem;
+  }
+
+  nav.desktop-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
+    background-color: white;
+    box-shadow: -10px 0 30px rgba(0,0,0,0.1);
+    flex-direction: column;
+    padding: 6rem 2rem 2rem;
+    transition: right 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    z-index: 1000;
+    overflow-y: auto;
+    display: flex;
+    align-items: flex-start;
+    gap: 0;
+  }
+
+  nav.desktop-nav.active {
+    right: 0;
+  }
+
+  nav.desktop-nav ul {
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+    margin: 0;
+    align-items: flex-start;
+  }
+
+  nav.desktop-nav li {
+    width: 100%;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+  }
+
+  nav.desktop-nav li a {
+    padding: 1.2rem 0;
+    font-size: 1.1rem;
+    width: 100%;
+    border-radius: 0;
+  }
+  
+  nav.desktop-nav li a.active {
+    background: none;
+    color: var(--accent-color);
+    box-shadow: none;
+  }
+
+  nav.desktop-nav li:last-child a {
+    margin: 2rem 0 0;
+    text-align: center;
+    justify-content: center;
+  }
+
+  header {
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    padding: 1rem 1.5rem !important;
+    gap: 0 !important;
+  }
 }
 
