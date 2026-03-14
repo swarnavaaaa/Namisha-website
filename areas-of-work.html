@@ -65,7 +65,29 @@
     <div class="page-title">
       <h1>What Can You Come to Therapy For?</h1>
       <div class="divider" style="margin-bottom: 2rem;"></div>
-      <img src="areas of work.jpg" alt="Artistic illustration representing various mental and emotional states for therapy" style="width: 100%; max-width: 450px; height: auto; border-radius: 12px; margin: 0 auto; display: block; box-shadow: 0 10px 40px rgba(0,0,0,0.05);">
+      <div style="max-width: 450px; margin: 0 auto; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.05);">
+        <video 
+          id="areas-video"
+          width="100%" 
+          height="auto" 
+          autoplay 
+          loop 
+          muted 
+          playsinline 
+          style="display: block; width: 100%; border-radius: 12px;">
+          <source src="jigsaw brain.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <script>
+        // Ensure seamless looping
+        const video = document.getElementById('areas-video');
+        if (video) {
+          video.addEventListener('ended', function() {
+            video.play();
+          });
+        }
+      </script>
     </div>
     
     <div class="content-section" style="margin-bottom: 2rem;">
