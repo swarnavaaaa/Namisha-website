@@ -115,21 +115,31 @@ pages = [
       <h1>Reach Out</h1>
       <div class="divider"></div>
     </div>
-    <div class="content-section two-cols">
-      <div>
-        <h3 style="margin-bottom: 1rem;">Let's Connect</h3>
-        <p style="margin-bottom: 1rem;">If you are interested in starting therapy, please feel free to reach out via email or fill out the form.</p>
-        <p><strong>Email:</strong> namisha.chamaria@example.com</p>
-        <p><strong>Location:</strong> Mumbai & Online</p>
-      </div>
-      <div>
-        <form style="display: flex; flex-direction: column; gap: 1rem; background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 5px 20px rgba(0,0,0,0.02);">
-          <input type="text" placeholder="Name" style="padding: 0.8rem; border: 1px solid #ddd; border-radius: 4px; font-family: var(--font-body);">
-          <input type="email" placeholder="Email" style="padding: 0.8rem; border: 1px solid #ddd; border-radius: 4px; font-family: var(--font-body);">
-          <textarea placeholder="Message" rows="4" style="padding: 0.8rem; border: 1px solid #ddd; border-radius: 4px; font-family: var(--font-body);"></textarea>
-          <button type="button" class="btn btn-primary">Send Message</button>
-        </form>
-      </div>
+    <div class="contact-form-container">
+        <h3 style="text-align: center; margin-bottom: 2rem;">Send a Message</h3>
+        <div class="contact-form">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="Name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Email" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" placeholder="Phone">
+          </div>
+          <div class="form-group">
+            <label for="subject">Inquiry</label>
+            <input type="text" id="subject" placeholder="Subject">
+          </div>
+          <div class="form-group full-width">
+            <label for="message">Message</label>
+            <textarea id="message" placeholder="Message" required></textarea>
+          </div>
+          <button type="button" id="submit-message" class="btn btn-primary">Send Message</button>
+        </div>
     </div>
   </main>
     """}
