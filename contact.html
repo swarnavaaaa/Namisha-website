@@ -58,6 +58,9 @@
         <i class="fa-solid fa-globe"></i>
       </div>
     </div>
+    <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle navigation">
+      <i class="fa-solid fa-bars"></i>
+    </button>
   </header>
   <main class="page-content">
     <div class="page-title">
@@ -98,7 +101,7 @@
         <h3 style="color: var(--heading-color); font-size: 1.5rem; margin-bottom: 2rem; text-align: center; display: flex; align-items: center; gap: 0.8rem; justify-content: center;">
           <i class="fa-solid fa-envelope-open-text" style="color: var(--accent-color);"></i> Send a Message
         </h3>
-        <form action="#" method="POST" class="contact-form">
+        <form action="#" class="contact-form">
           <div class="form-group">
             <label for="name">Full Name</label>
             <input type="text" id="name" name="name" placeholder="Enter your full name" required>
@@ -151,12 +154,20 @@
   <script>
     const mobileMenuToggle = document.getElementById('mobileMenuToggle');
     const desktopNav = document.querySelector('.desktop-nav');
-    const menuIcon = mobileMenuToggle.querySelector('i');
-
+    const menuIcon = mobileMenuToggle ? mobileMenuToggle.querySelector('i') : null;
+    
     // Supabase Configuration
     const SUPABASE_URL = 'https://redpnaaqopkcolvekmbs.supabase.co';
     const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJlZHBuYWFxb3BrY29sdmVrbWJzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzM1NjI5ODMsImV4cCI6MjA4OTEzODk4M30.Ld63O82DJBfp17dwc_UUqzj-XxXtwLOwnBRdVxsunpg';
-    const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+    
+    let supabaseClient = null;
+    try {
+      if (typeof supabase !== 'undefined') {
+        supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+      }
+    } catch (err) {
+      console.error('Supabase init error:', err);
+    }
 
     // Contact Form Submission
     const contactForm = document.querySelector('.contact-form');
@@ -165,11 +176,18 @@
         e.preventDefault();
         
         const submitBtn = contactForm.querySelector('button[type="submit"]');
-        const originalBtnText = submitBtn.innerHTML;
+        const originalBtnText = submitBtn ? submitBtn.innerHTML : 'Send Message';
         
+        if (!supabaseClient) {
+          alert('Note: The database connection could not be established. This may be due to an ad-blocker or connection issue. Please try emailing directly.');
+          return;
+        }
+
         // Show loading state
-        submitBtn.disabled = true;
-        submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+        }
 
         const formData = {
           name: document.getElementById('name').value,
@@ -188,36 +206,44 @@
 
           // Success feedback
           const container = document.querySelector('.contact-form-container');
-          container.style.opacity = '0';
-          setTimeout(() => {
-            container.innerHTML = `
-              <div style="text-align: center; padding: 2rem;">
-                <div style="width: 70px; height: 70px; background: #BDD0D4; color: var(--heading-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 2rem;">
-                  <i class="fa-solid fa-check"></i>
+          if (container) {
+            container.style.opacity = '0';
+            setTimeout(() => {
+              container.innerHTML = `
+                <div style="text-align: center; padding: 2rem;">
+                  <div style="width: 70px; height: 70px; background: #BDD0D4; color: var(--heading-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 2rem;">
+                    <i class="fa-solid fa-check"></i>
+                  </div>
+                  <h3 style="color: var(--heading-color); font-size: 1.8rem; margin-bottom: 1rem;">Message Sent!</h3>
+                  <p style="color: var(--body-text-color); font-size: 1.1rem; line-height: 1.6;">Thank you for reaching out. I have received your message and will get back to you within 3-7 working days.</p>
+                  <button onclick="location.reload()" class="btn btn-secondary" style="margin-top: 2rem;">Send Another Message</button>
                 </div>
-                <h3 style="color: var(--heading-color); font-size: 1.8rem; margin-bottom: 1rem;">Message Sent!</h3>
-                <p style="color: var(--body-text-color); font-size: 1.1rem; line-height: 1.6;">Thank you for reaching out. I have received your message and will get back to you within 3-7 working days.</p>
-                <button onclick="location.reload()" class="btn btn-secondary" style="margin-top: 2rem;">Send Another Message</button>
-              </div>
-            `;
-            container.style.opacity = '1';
-            container.style.transition = 'opacity 0.5s ease';
-          }, 500);
+              `;
+              container.style.opacity = '1';
+              container.style.transition = 'opacity 0.5s ease';
+            }, 500);
+          }
 
         } catch (error) {
           console.error('Supabase Error:', error);
           alert('There was an error sending your message. Please verify you have created the "contact_messages" table in Supabase or try again later.');
-          submitBtn.disabled = false;
-          submitBtn.innerHTML = originalBtnText;
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalBtnText;
+          }
         }
       });
     }
 
-    mobileMenuToggle.addEventListener('click', () => {
-      desktopNav.classList.toggle('active');
-      menuIcon.classList.toggle('fa-bars');
-      menuIcon.classList.toggle('fa-xmark');
-    });
+    if (mobileMenuToggle) {
+      mobileMenuToggle.addEventListener('click', () => {
+        desktopNav.classList.toggle('active');
+        if (menuIcon) {
+          menuIcon.classList.toggle('fa-bars');
+          menuIcon.classList.toggle('fa-xmark');
+        }
+      });
+    }
 
     // Custom Translate Trigger
     const customTranslateBtn = document.getElementById('customTranslateBtn');
@@ -231,13 +257,17 @@
     }
 
     // Close menu when clicking a link
-    document.querySelectorAll('.desktop-nav a').forEach(link => {
-      link.addEventListener('click', () => {
-        desktopNav.classList.remove('active');
-        menuIcon.classList.add('fa-bars');
-        menuIcon.classList.remove('fa-xmark');
+    if (desktopNav) {
+      document.querySelectorAll('.desktop-nav a').forEach(link => {
+        link.addEventListener('click', () => {
+          desktopNav.classList.remove('active');
+          if (menuIcon) {
+            menuIcon.classList.add('fa-bars');
+            menuIcon.classList.remove('fa-xmark');
+          }
+        });
       });
-    });
+    }
   </script>
 </body>
 </html>
