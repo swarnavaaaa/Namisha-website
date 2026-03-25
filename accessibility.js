@@ -4,6 +4,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const accessibilityMenu = document.getElementById('accessibilityMenu');
     const options = document.querySelectorAll('.accessibility-option');
 
+    // Create Reading Guide if not exists
+    if (!document.querySelector('.reading-guide-overlay')) {
+        const overlay = document.createElement('div');
+        overlay.className = 'reading-guide-overlay';
+        document.body.appendChild(overlay);
+    }
+    const readingGuideOverlay = document.querySelector('.reading-guide-overlay');
+
     // Toggle Menu
     if (accessibilityBtn && accessibilityMenu) {
         accessibilityBtn.addEventListener('click', (e) => {
@@ -48,5 +56,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
         });
+    });
+
+    // Reading Guide Mouse Follower
+    document.addEventListener('mousemove', (e) => {
+        if (document.body.classList.contains('reading-guide')) {
+            const y = e.clientY - 50; // Center the 100px gap
+            readingGuideOverlay.style.setProperty('--dy', `${y}px`);
+        }
     });
 });
