@@ -12,6 +12,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     const readingGuideOverlay = document.querySelector('.reading-guide-overlay');
 
+    // Store last mouse position for immediate updates
+    let lastMouseY = window.innerHeight / 2;
+
+    function updateReadingGuide(y) {
+        if (readingGuideOverlay) {
+            const centerY = y - 50; // Center a 100px gap
+            readingGuideOverlay.style.setProperty('--dy', `${centerY}px`);
+        }
+    }
+
     // Toggle Menu
     if (accessibilityBtn && accessibilityMenu) {
         accessibilityBtn.addEventListener('click', (e) => {
@@ -35,6 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (localStorage.getItem(mode) === 'true') {
             document.body.classList.add(mode);
             option.classList.add('active');
+            if (mode === 'reading-guide') updateReadingGuide(lastMouseY);
         }
 
         option.addEventListener('click', (e) => {
@@ -43,6 +54,10 @@ document.addEventListener('DOMContentLoaded', () => {
             option.classList.toggle('active');
             localStorage.setItem(mode, isActive);
             
+            if (mode === 'reading-guide' && isActive) {
+                updateReadingGuide(lastMouseY);
+            }
+
             // Mutual exclusivity for Dark Mode and High Contrast
             if (isActive) {
                 if (mode === 'dark-mode' || mode === 'high-contrast') {
@@ -58,11 +73,25 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Reading Guide Mouse Follower
-    document.addEventListener('mousemove', (e) => {
-        if (document.body.classList.contains('reading-guide')) {
-            const y = e.clientY - 50; // Center the 100px gap
-            readingGuideOverlay.style.setProperty('--dy', `${y}px`);
+    // Reading Guide Listeners
+    const handleMove = (e) => {
+        const y = e.clientY || (e.touches && e.touches[0].clientY);
+        if (y !== undefined) {
+            lastMouseY = y;
+            if (document.body.classList.contains('reading-guide')) {
+                updateReadingGuide(lastMouseY);
+            }
         }
-    });
+    };
+
+    document.addEventListener('mousemove', handleMove);
+    document.addEventListener('touchmove', handleMove);
+    document.addEventListener('touchstart', handleMove);
+    
+    // Also track scroll to keep the guide responsive
+    window.addEventListener('scroll', () => {
+        if (document.body.classList.contains('reading-guide')) {
+            updateReadingGuide(lastMouseY);
+        }
+    }, { passive: true });
 });
