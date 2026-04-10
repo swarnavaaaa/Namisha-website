@@ -1,43 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://thesingularspace.in/index.html</loc>
-    <lastmod>2026-03-12</lastmod>
+    <loc>https://thesingularspace.in/</loc>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>1.00</priority>
   </url>
   <url>
     <loc>https://thesingularspace.in/about.html</loc>
-    <lastmod>2026-03-12</lastmod>
-    <priority>0.80</priority>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
   </url>
   <url>
     <loc>https://thesingularspace.in/psychotherapy.html</loc>
-    <lastmod>2026-03-12</lastmod>
-    <priority>0.80</priority>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
   </url>
   <url>
     <loc>https://thesingularspace.in/areas-of-work.html</loc>
-    <lastmod>2026-03-12</lastmod>
-    <priority>0.80</priority>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://thesingularspace.in/faqs.html</loc>
-    <lastmod>2026-03-12</lastmod>
-    <priority>0.70</priority>
-  </url>
-  <url>
-    <loc>https://thesingularspace.in/resources.html</loc>
-    <lastmod>2026-03-12</lastmod>
-    <priority>0.70</priority>
-  </url>
-  <url>
-    <loc>https://thesingularspace.in/contact.html</loc>
-    <lastmod>2026-03-12</lastmod>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://thesingularspace.in/resources.html</loc>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://thesingularspace.in/contact.html</loc>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
     <loc>https://thesingularspace.in/terms-of-service.html</loc>
-    <lastmod>2026-03-12</lastmod>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>yearly</changefreq>
     <priority>0.50</priority>
   </url>
 </urlset>
