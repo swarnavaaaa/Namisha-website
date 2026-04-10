@@ -472,6 +472,14 @@ footer {
   max-width: 800px;
 }
 
+.footer-nav {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
 .footer-link {
   color: #2C3E50;
   font-family: var(--font-body);
